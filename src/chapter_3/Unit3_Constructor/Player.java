@@ -66,7 +66,7 @@ public class Player {
     return holding;
   }
 
-  public void shoot(){
+  public void shoot() {
     this.shoot(this.holding, this.target);
   }
 

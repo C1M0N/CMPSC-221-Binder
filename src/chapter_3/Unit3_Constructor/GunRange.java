@@ -24,14 +24,13 @@ public class GunRange {
     int gameStatus = 1;
     String command;
 
-
     player.setHolding(gun);
     player.setTarget(dummy);
 
-    while(gameStatus == 1){
+    while (gameStatus == 1) {
       command = input.nextLine();
 
-      switch(command){
+      switch (command) {
         case " ":
           player.shoot();
           break;
@@ -44,7 +43,7 @@ public class GunRange {
         case "exit":
           gameStatus = 0;
           break;
-        default :
+        default:
           System.out.println("Error: Wrong Command.");
       }
     }

@@ -12,21 +12,22 @@
 package chapter_3.Unit3_Constructor;
 
 public class Dummy {
+
   private String name;
   private double maxHp;
   private double hp;
 
-  public Dummy(String name, double maxHp){
+  public Dummy(String name, double maxHp) {
     this.name = name;
     this.maxHp = maxHp;
     this.hp = maxHp;
   }
 
-  public void setName(String name){
+  public void setName(String name) {
     this.name = name;
   }
 
-  public String getName(){
+  public String getName() {
     return name;
   }
 

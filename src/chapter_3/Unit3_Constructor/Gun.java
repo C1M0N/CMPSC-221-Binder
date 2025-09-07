@@ -19,7 +19,7 @@ public class Gun {
   private double power;
   private double range;
 
-  public Gun(){
+  public Gun() {
     this("Default Gun", 6, 2, 50);
   }
 
@@ -49,19 +49,19 @@ public class Gun {
     return maxAmmo;
   }
 
-  public void setCurrentAmmo(int forceCurrentAmmo){
+  public void setCurrentAmmo(int forceCurrentAmmo) {
     this.currentAmmo = forceCurrentAmmo;
   }
 
-  public int getCurrentAmmo(){
+  public int getCurrentAmmo() {
     return currentAmmo;
   }
 
-  public void setPower(int power){
+  public void setPower(int power) {
     this.power = power;
   }
 
-  public double getPower(){
+  public double getPower() {
     return power;
   }
 
