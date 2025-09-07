@@ -20,9 +20,12 @@ public class Gun {
   private double range;
 
   public Gun() {
-    this("Default Gun", 6, 2, 50);
+    this("Default Gun", 6, 5, 50);
   }
 
+  public Gun(String name){
+    this(name, 6, 5, 50);
+  }
   public Gun(String name, int maxAmmo, double power, double range) {
     this.name = name;
     this.maxAmmo = maxAmmo;

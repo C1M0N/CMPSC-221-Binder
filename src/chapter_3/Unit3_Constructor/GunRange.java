@@ -17,35 +17,22 @@ public class GunRange {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
+    String userCommand;
+
+    // 对象初始化
     Player player = new Player("Steve", 100);
     Dummy dummy = new Dummy("test1", 100);
     Gun gun = new Gun();
 
-    int gameStatus = 1;
-    String command;
+    // 变量初始化
+    boolean isRunning = true;
 
     player.setHolding(gun);
     player.setTarget(dummy);
 
-    while (gameStatus == 1) {
-      command = input.nextLine();
-
-      switch (command) {
-        case " ":
-          player.shoot();
-          break;
-        case "r":
-          player.reloading();
-          break;
-        case "f":
-          player.setAmmo(player.getAmmo() + 30);
-          break;
-        case "exit":
-          gameStatus = 0;
-          break;
-        default:
-          System.out.println("Error: Wrong Command.");
-      }
+    while (isRunning) {
+      userCommand = input.nextLine();
+      isRunning = World.processCommand(userCommand, player);
     }
   }
 
