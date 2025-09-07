@@ -32,6 +32,7 @@ public class AccountTest {
     do {
       System.out.println("如果正确请输入yes结束程序");
       confirm = input.nextLine().trim();
+      System.out.printf("开户完成,您的账户名为：%s%n", bankAccount.getName());
     } while (!confirm.equalsIgnoreCase("yes"));
 
   }
