@@ -66,6 +66,10 @@ public class Player {
     return holding;
   }
 
+  public void shoot(){
+    this.shoot(this.holding, this.target);
+  }
+
   public void shoot(Gun gunUsed, Dummy target) {
     this.setHolding(gunUsed);
     this.setTarget(target);
@@ -104,7 +108,7 @@ public class Player {
 
     currentAmmo += ammoUsed;
     this.holding.setCurrentAmmo(currentAmmo);
-    System.out.printf("装弹成功！已消耗弹药%d颗\n弹夹状况：%d/%d\n剩余弹药：%d\n\n", ammoUsed, currentAmmo,
-        maxAmmo, ammo);
+    System.out.printf("装弹成功！已消耗弹药%d颗\n弹夹状况：%d/%d\n剩余弹药：%d\n\n", ammoUsed,
+        currentAmmo, maxAmmo, ammo);
   }
 }

@@ -16,21 +16,38 @@ import java.util.Scanner;
 public class GunRange {
 
   public static void main(String[] args) {
-  Scanner input = new Scanner(System.in);
-  Player player = new Player("Steve", 100);
-  Dummy dummy = new Dummy("test1", 100);
-  Gun gun = new Gun();
+    Scanner input = new Scanner(System.in);
+    Player player = new Player("Steve", 100);
+    Dummy dummy = new Dummy("test1", 100);
+    Gun gun = new Gun();
 
-  System.out.println(player.getAmmo());
+    int gameStatus = 1;
+    String command;
 
-  player.setAmmo(30);
-  System.out.println(player.getAmmo());
 
-  player.shoot(gun, dummy);
-  player.reloading();
-  player.shoot(gun, dummy);
-  player.reloading();
-  player.shoot(gun, dummy);
+    player.setHolding(gun);
+    player.setTarget(dummy);
+
+    while(gameStatus == 1){
+      command = input.nextLine();
+
+      switch(command){
+        case " ":
+          player.shoot();
+          break;
+        case "r":
+          player.reloading();
+          break;
+        case "f":
+          player.setAmmo(player.getAmmo() + 30);
+          break;
+        case "exit":
+          gameStatus = 0;
+          break;
+        default :
+          System.out.println("Error: Wrong Command.");
+      }
+    }
   }
 
 }
