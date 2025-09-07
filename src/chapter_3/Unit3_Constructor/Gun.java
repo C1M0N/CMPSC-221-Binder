@@ -30,7 +30,7 @@ public class Gun {
     this.range = range;
     this.currentAmmo = 0;
 
-    System.out.print("你获得一把新枪！");
+    System.out.println("你获得一把新枪！\n");
   }
 
   public void setName(String name) {
@@ -57,22 +57,19 @@ public class Gun {
     return currentAmmo;
   }
 
-  public int reloading(int totalAmmo){
-    int ammoUsed;
-
-      if (totalAmmo >= maxAmmo){
-        ammoUsed = maxAmmo - currentAmmo;
-        currentAmmo += ammoUsed;
-
-        return ammoUsed;
-      }
-      ammoUsed = maxAmmo - totalAmmo;
-      currentAmmo += ammoUsed;
-
-      return ammoUsed;
-  }
-
   public void setPower(int power){
     this.power = power;
+  }
+
+  public double getPower(){
+    return power;
+  }
+
+  public void setRange(double range) {
+    this.range = range;
+  }
+
+  public double getRange() {
+    return range;
   }
 }

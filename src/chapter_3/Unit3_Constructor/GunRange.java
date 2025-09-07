@@ -11,10 +11,26 @@
  */
 package chapter_3.Unit3_Constructor;
 
+import java.util.Scanner;
+
 public class GunRange {
 
   public static void main(String[] args) {
+  Scanner input = new Scanner(System.in);
+  Player player = new Player("Steve", 100);
+  Dummy dummy = new Dummy("test1", 100);
+  Gun gun = new Gun();
 
+  System.out.println(player.getAmmo());
+
+  player.setAmmo(30);
+  System.out.println(player.getAmmo());
+
+  player.shoot(gun, dummy);
+  player.reloading();
+  player.shoot(gun, dummy);
+  player.reloading();
+  player.shoot(gun, dummy);
   }
 
 }
